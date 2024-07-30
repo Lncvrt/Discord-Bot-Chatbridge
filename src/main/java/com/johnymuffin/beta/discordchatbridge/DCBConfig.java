@@ -7,7 +7,6 @@ import java.io.File;
 
 public class DCBConfig extends Configuration {
 
-
     public DCBConfig(Plugin plugin) {
         super(new File(plugin.getDataFolder(), "config.yml"));
         this.reload();
@@ -87,9 +86,7 @@ public class DCBConfig extends Configuration {
         return Boolean.valueOf(getConfigString(key));
     }
 
-
     //Getters End
-
 
     private void reload() {
         this.load();

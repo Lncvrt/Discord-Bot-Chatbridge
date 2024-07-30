@@ -1,0 +1,9 @@
+name: DiscordChatBridge
+authors:
+    - JohnyMuffin
+    - Owen2k6
+version: "${version}"
+main: com.johnymuffin.beta.discordchatbridge.DiscordChatBridge
+softdepend:
+    - DiscordCore
+    - DiscordAuthentication

@@ -176,9 +176,7 @@ public class DCBDiscordListener extends ListenerAdapter {
             }
 
             //Final prefix check
-            if (prefix == null) {
-                prefix = "";
-            }
+            if (prefix == null) prefix = "";
             prefix = prefix.replaceAll("(&([a-f0-9]))", "\u00A7$2");
 
             String chatMessage = plugin.getConfig().getConfigString("message.discord-chat-message");
@@ -186,12 +184,8 @@ public class DCBDiscordListener extends ListenerAdapter {
             chatMessage = chatMessage.replace("%message%", dmsg);
             chatMessage = chatMessage.replaceAll("(&([a-f0-9]))", "\u00A7$2");
             chatMessage = chatMessage.replace("%prefix%", prefix);
+            if (chatMessage.length() > 100) chatMessage = chatMessage.substring(0, 100);
             Bukkit.getServer().broadcastMessage(chatMessage);
-            return;
         }
-
-
     }
-
-
 }

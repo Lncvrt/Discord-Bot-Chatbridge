@@ -126,11 +126,9 @@ public class DiscordChatBridge extends JavaPlugin {
         logger(Level.INFO, "Has been disabled.");
     }
 
-
     public void logger(Level level, String message) {
         log.log(level, "[" + pluginName + "] " + message);
     }
-
 
     public DCBConfig getConfig() {
         return dcbConfig;
@@ -151,7 +149,6 @@ public class DiscordChatBridge extends JavaPlugin {
         }
     }
 
-
     private class ShutdownListener extends CustomEventListener {
 
         @Override
@@ -167,6 +164,5 @@ public class DiscordChatBridge extends JavaPlugin {
             Bukkit.getServer().getPluginManager().disablePlugin(plugin);
 
         }
-
     }
 }

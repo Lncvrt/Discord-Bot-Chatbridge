@@ -65,10 +65,9 @@ public class DCBGameListener extends PlayerListener {
     }
 
     public String sanitizeMessage(String chatMessage) {
-        chatMessage = chatMessage.replaceAll(Pattern.quote("@"), " ");
-        chatMessage = chatMessage.replaceAll(Pattern.quote("@everyone"), " ");
-        chatMessage = chatMessage.replaceAll(Pattern.quote("@here"), " ");
+        chatMessage = chatMessage.replaceAll(Pattern.quote("@"), "");
+        chatMessage = chatMessage.replaceAll(Pattern.quote("@everyone"), "");
+        chatMessage = chatMessage.replaceAll(Pattern.quote("@here"), "");
         return chatMessage;
     }
-
 }
